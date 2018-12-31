@@ -29,7 +29,7 @@ namespace QuickstartIdentityServer
                 .AddInMemoryIdentityResources(InMemoryInitConfig.GetIdentityResources())
                 .AddInMemoryApiResources(InMemoryInitConfig.GetApiResources())
                 .AddInMemoryClients(InMemoryInitConfig.GetClients())
-                .AddLdapUsers<OpenLdapAppUser>(Configuration.GetSection("IdentityServerLdap"), UserStore.InMemory);
+                .AddLdapUsers<JumpCloudLdapAppUser>(Configuration.GetSection("IdentityServerJumpCloudLdap"), UserStore.InMemory);
         }
 
         public void Configure(IApplicationBuilder app)
